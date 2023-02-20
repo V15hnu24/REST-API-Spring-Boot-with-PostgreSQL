@@ -12,8 +12,10 @@ public interface loadsService {
 
     public load addLoad(load load);
 
-    public load updateLoad(load load);
+    public load updateLoad(long Id, load load);
 
     public void deleteLoad(long loadId);
+
+    public List<load> getLoadByShipperId(String shipperId);
 
 }

@@ -2,8 +2,12 @@ package com.springrest.springrest.entitiy;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class load {
-    
+    @Id
     private Long id;
 
     private String loadingPoint;
@@ -14,20 +18,20 @@ public class load {
 
     private String truckType;
 
-    private int noOfTrucks;
+    private String noOfTrucks;
 
-    private float weight;
+    private String weight;
 
     private String comment;
 
     private String shipperId;
 
-    private Date date;
+    private String date;
 
     // getters and setters
 
-    public load(long id, String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks,
-            float weight, String comment, String shipperId, Date date) {
+    public load(long id, String loadingPoint, String unloadingPoint, String productType, String truckType, String noOfTrucks,
+            String weight, String comment, String shipperId, String date) {
         super();
         this.id = id;
         this.loadingPoint = loadingPoint;
@@ -37,9 +41,11 @@ public class load {
         this.noOfTrucks = noOfTrucks;
         this.weight = weight;
         this.comment = comment;
-        this.shipperId = shipperId;
+        this.shipperId = shipperId; 
         this.date = date;
     }
+
+
 
     public load() {
         super();
@@ -88,19 +94,19 @@ public class load {
         this.truckType = truckType;
     }
 
-    public int getNoOfTrucks() {
+    public String getNoOfTrucks() {
         return noOfTrucks;
     }
 
-    public void setNoOfTrucks(int noOfTrucks) {
+    public void setNoOfTrucks(String noOfTrucks) {
         this.noOfTrucks = noOfTrucks;
     }
 
-    public float getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
@@ -120,11 +126,11 @@ public class load {
         this.shipperId = shipperId;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
